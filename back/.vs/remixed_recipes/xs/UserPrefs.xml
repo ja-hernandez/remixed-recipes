@@ -6,14 +6,9 @@
         <State name="__root__">
           <Node name="remixed_recipes" expanded="True">
             <Node name="RemixedRecipes" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
-                <Node name="SdkDependencies" expanded="True">
-                  <Node name="Microsoft.NETCore.App" expanded="True" selected="True" />
-                </Node>
-              </Node>
               <Node name="Controllers" expanded="True" />
               <Node name="Properties" expanded="True" />
+              <Node name="appsettings.json" expanded="True" selected="True" />
             </Node>
           </Node>
         </State>
