@@ -1,24 +1,23 @@
 ﻿<Properties StartupConfiguration="{E40F5FE6-D102-4CB5-B262-7820B5EFF235}|Default">
   <MonoDevelop.Ide.ItemProperties.RemixedRecipes PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RemixedRecipes/Models/Preparation.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RemixedRecipes/Startup.cs">
     <Files>
+      <File FileName="RemixedRecipes/Models/Ingredient.cs" Line="8" Column="1" />
+      <File FileName="RemixedRecipes/Models/Preparation.cs" />
+      <File FileName="RemixedRecipes/Models/Quantity.cs" />
+      <File FileName="RemixedRecipes/Models/Recipe.cs" Line="9" Column="35" />
+      <File FileName="RemixedRecipes/Data/ApiDbContext.cs" Line="15" Column="47" />
+      <File FileName="RemixedRecipes/Models/Unit.cs" Line="9" Column="1" />
       <File FileName="RemixedRecipes/Startup.cs" Line="1" Column="1" />
-      <File FileName="RemixedRecipes/Models/EmptyClass.cs" Line="15" Column="1" />
-      <File FileName="RemixedRecipes/Models/RecipeIngredients.cs" Line="6" Column="1" />
-      <File FileName="RemixedRecipes/Models/Ingredient.cs" Line="1" Column="1" />
-      <File FileName="RemixedRecipes/Models/Quantity.cs" Line="1" Column="1" />
-      <File FileName="RemixedRecipes/Models/Unit.cs" Line="1" Column="1" />
-      <File FileName="RemixedRecipes/Models/Preparation.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="remixed_recipes" expanded="True">
             <Node name="RemixedRecipes" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="Preparation.cs" selected="True" />
-              </Node>
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>

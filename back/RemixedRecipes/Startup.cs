@@ -9,8 +9,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using RemixedRecipes.Data;
 
 namespace RemixedRecipes
 {
@@ -26,14 +28,14 @@ namespace RemixedRecipes
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
-            services.AddEntityFrameworkNpgsql().AddDbContext<DbContext>(options =>
-      options.UseNpgsql(Configuration.GetConnectionString("DbContext")));
+            services.AddEntityFrameworkNpgsql().AddDbContext<ApiDbContext>(options =>
+                  options.UseNpgsql(Configuration.GetConnectionString("DbContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -45,7 +47,6 @@ namespace RemixedRecipes
             }
 
             app.UseHttpsRedirection();
-            app.UseMvc();
         }
     }
 }
