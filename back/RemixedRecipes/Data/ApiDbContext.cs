@@ -15,3 +15,4 @@ namespace RemixedRecipes.Data
         public DbSet<Unit> Units { get; set; }
 
     }
+}

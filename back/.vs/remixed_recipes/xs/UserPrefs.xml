@@ -1,23 +1,24 @@
-﻿<Properties StartupConfiguration="{E40F5FE6-D102-4CB5-B262-7820B5EFF235}|Default">
+﻿<Properties StartupConfiguration="{7D819E98-5B16-4A8E-886B-5482442AF3D9}|Default">
   <MonoDevelop.Ide.ItemProperties.RemixedRecipes PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RemixedRecipes/Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RemixedRecipes/Dockerfile">
     <Files>
       <File FileName="RemixedRecipes/Models/Ingredient.cs" Line="8" Column="1" />
       <File FileName="RemixedRecipes/Models/Preparation.cs" />
       <File FileName="RemixedRecipes/Models/Quantity.cs" />
-      <File FileName="RemixedRecipes/Models/Recipe.cs" Line="9" Column="35" />
-      <File FileName="RemixedRecipes/Data/ApiDbContext.cs" Line="15" Column="47" />
-      <File FileName="RemixedRecipes/Models/Unit.cs" Line="9" Column="1" />
-      <File FileName="RemixedRecipes/Startup.cs" Line="1" Column="1" />
+      <File FileName="RemixedRecipes/Models/Recipe.cs" />
+      <File FileName="RemixedRecipes/Data/ApiDbContext.cs" />
+      <File FileName="RemixedRecipes/Models/Unit.cs" />
+      <File FileName="RemixedRecipes/Dockerfile" Line="22" Column="44" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="remixed_recipes" expanded="True">
+            <Node name="docker-compose" expanded="True" />
             <Node name="RemixedRecipes" expanded="True">
               <Node name="Data" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Startup.cs" selected="True" />
+              <Node name="Dockerfile" selected="True" />
             </Node>
           </Node>
         </State>
@@ -26,6 +27,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
