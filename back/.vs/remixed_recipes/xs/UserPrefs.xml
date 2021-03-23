@@ -1,26 +1,10 @@
-﻿<Properties StartupConfiguration="{7D819E98-5B16-4A8E-886B-5482442AF3D9}|Default">
+﻿<Properties>
   <MonoDevelop.Ide.ItemProperties.RemixedRecipes PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RemixedRecipes/Dockerfile">
-    <Files>
-      <File FileName="RemixedRecipes/Models/Ingredient.cs" Line="8" Column="1" />
-      <File FileName="RemixedRecipes/Models/Preparation.cs" />
-      <File FileName="RemixedRecipes/Models/Quantity.cs" />
-      <File FileName="RemixedRecipes/Models/Recipe.cs" />
-      <File FileName="RemixedRecipes/Data/ApiDbContext.cs" />
-      <File FileName="RemixedRecipes/Models/Unit.cs" />
-      <File FileName="RemixedRecipes/Dockerfile" Line="22" Column="44" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="remixed_recipes" expanded="True">
-            <Node name="docker-compose" expanded="True" />
-            <Node name="RemixedRecipes" expanded="True">
-              <Node name="Data" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Dockerfile" selected="True" />
-            </Node>
-          </Node>
+          <Node name="remixed_recipes" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>

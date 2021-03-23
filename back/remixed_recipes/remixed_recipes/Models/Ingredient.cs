@@ -3,13 +3,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace remixed_recipes.Models
 {
-    public class Instructions
+    public class Ingredient
     {
         [Key]
         public int Id { get; set; }
-        public string InstructionsText { get; set; }
+        public string Name { get; set; }
 
-        public Instructions()
+        public Ingredient()
         {
         }
     }
