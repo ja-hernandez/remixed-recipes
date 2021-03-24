@@ -1,20 +1,20 @@
 ﻿<Properties StartupConfiguration="{F3709D46-ED28-4CD5-A9D4-A5F9A6D62680}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="remixed_recipes/Migrations/20210323230607_init.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="remixed_recipes/Startup.cs">
     <Files>
-      <File FileName="remixed_recipes/Startup.cs" Line="35" Column="10" />
-      <File FileName="remixed_recipes/Data/ApiDBContext.cs" Line="17" Column="16" />
-      <File FileName="remixed_recipes/Models/Recipe.cs" Line="2" Column="40" />
-      <File FileName="remixed_recipes/Models/Instructions.cs" Line="8" Column="12" />
-      <File FileName="remixed_recipes/Models/Ingredients.cs" Line="16" Column="2" />
-      <File FileName="remixed_recipes/Models/Quantity.cs" Line="8" Column="11" />
-      <File FileName="remixed_recipes/Models/Unit.cs" Line="8" Column="1" />
-      <File FileName="remixed_recipes/Models/Preparation.cs" Line="8" Column="11" />
-      <File FileName="remixed_recipes/Models/RecipeIngredient.cs" Line="19" Column="20" />
-      <File FileName="remixed_recipes/Program.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/appsettings.json" Line="1" Column="1" />
-      <File FileName="remixed_recipes/appsettings.Development.json" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Controllers/RecipeController.cs" Line="107" Column="33" />
+      <File FileName="remixed_recipes/Startup.cs" Line="88" Column="37" />
+      <File FileName="remixed_recipes/Data/ApiDBContext.cs" />
+      <File FileName="remixed_recipes/Models/Recipe.cs" />
+      <File FileName="remixed_recipes/Models/Instructions.cs" />
+      <File FileName="remixed_recipes/Models/Quantity.cs" />
+      <File FileName="remixed_recipes/Models/Unit.cs" />
+      <File FileName="remixed_recipes/Models/Preparation.cs" />
+      <File FileName="remixed_recipes/Models/RecipeIngredient.cs" />
+      <File FileName="remixed_recipes/Program.cs" />
+      <File FileName="remixed_recipes/appsettings.json" />
+      <File FileName="remixed_recipes/appsettings.Development.json" />
+      <File FileName="remixed_recipes/Controllers/RecipeController.cs" Line="26" Column="11" />
       <File FileName="remixed_recipes/Migrations/20210323230607_init.cs" Line="1" Column="1" />
+      <File FileName="remixed_recipes/remixed_recipes.csproj" Line="30" Column="17" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,11 +23,10 @@
             <Node name="remixed_recipes" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
-              <Node name="Migrations" expanded="True">
-                <Node name="20210323230607_init.cs" selected="True" />
-              </Node>
+              <Node name="Migrations" expanded="True" />
               <Node name="Properties" expanded="True" />
               <Node name="appsettings.json" expanded="True" />
+              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>

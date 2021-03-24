@@ -22,6 +22,11 @@ namespace remixed_recipes.Controllers
         }
 
         // GET: api/Recipe
+       ///<summary>
+       ///Pulls all recipes
+       /// </summary>
+
+
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Recipe>>> GetRecipes()
         {
