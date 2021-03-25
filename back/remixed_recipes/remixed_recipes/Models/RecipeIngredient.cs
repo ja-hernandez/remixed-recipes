@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace remixed_recipes.Models
 {
     public class RecipeIngredient

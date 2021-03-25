@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using remixed_recipes.Models;
 
@@ -20,7 +21,9 @@ namespace remixed_recipes.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<RecipeIngredient>()
-                .HasKey(ri => new { ri.RecipeId, ri.IngredientId });    
+            .HasKey(ri => new { ri.RecipeId, ri.IngredientId });
+
+
         }
     }
 

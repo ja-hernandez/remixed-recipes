@@ -1,35 +1,37 @@
 ﻿<Properties StartupConfiguration="{F3709D46-ED28-4CD5-A9D4-A5F9A6D62680}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="remixed_recipes/Services/RecipeServices/RecipeService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="remixed_recipes/Migrations/20210325030845_recipeIng-2.Designer.cs">
     <Files>
+      <File FileName="remixed_recipes/Migrations/20210324211234_Rework1-1RecipeInstructions.cs" IsPinned="True" />
       <File FileName="remixed_recipes/Startup.cs" Line="88" Column="37" />
-      <File FileName="remixed_recipes/Data/ApiDBContext.cs" />
-      <File FileName="remixed_recipes/Models/Recipe.cs" Line="12" Column="1" />
-      <File FileName="remixed_recipes/Models/Instructions.cs" Line="11" Column="40" />
-      <File FileName="remixed_recipes/Models/Quantity.cs" />
-      <File FileName="remixed_recipes/Models/Unit.cs" />
-      <File FileName="remixed_recipes/Models/Preparation.cs" />
-      <File FileName="remixed_recipes/Models/RecipeIngredient.cs" />
+      <File FileName="remixed_recipes/Data/ApiDBContext.cs" Line="26" Column="1" />
+      <File FileName="remixed_recipes/Models/Recipe.cs" Line="14" Column="75" />
+      <File FileName="remixed_recipes/Models/Instructions.cs" Line="12" Column="41" />
+      <File FileName="remixed_recipes/Models/Quantity.cs" Line="12" Column="9" />
+      <File FileName="remixed_recipes/Models/Unit.cs" Line="10" Column="22" />
+      <File FileName="remixed_recipes/Models/Preparation.cs" Line="12" Column="77" />
+      <File FileName="remixed_recipes/Models/RecipeIngredient.cs" Line="23" Column="1" />
       <File FileName="remixed_recipes/Program.cs" />
       <File FileName="remixed_recipes/appsettings.json" />
       <File FileName="remixed_recipes/appsettings.Development.json" />
-      <File FileName="remixed_recipes/Controllers/RecipeController.cs" />
-      <File FileName="remixed_recipes/Migrations/20210323230607_init.cs" Line="1" Column="1" />
+      <File FileName="remixed_recipes/Controllers/RecipeController.cs" Line="52" Column="53" />
+      <File FileName="remixed_recipes/Migrations/20210323230607_init.cs" />
       <File FileName="remixed_recipes/remixed_recipes.csproj" />
-      <File FileName="remixed_recipes/Migrations/20210324211234_Rework1-1RecipeInstructions.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Services/RecipeServices/IRecipeService.cs" Line="11" Column="45" />
-      <File FileName="remixed_recipes/Services/RecipeServices/RecipeService.cs" Line="4" Column="31" />
+      <File FileName="remixed_recipes/Migrations/20210325030845_recipeIng-2.cs" Line="1" Column="1" />
+      <File FileName="remixed_recipes/Migrations/20210325030845_recipeIng-2.Designer.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="remixed_recipes" expanded="True">
             <Node name="remixed_recipes" expanded="True">
-              <Node name="Migrations" expanded="True" />
-              <Node name="Services" expanded="True">
-                <Node name="RecipeServices" expanded="True">
-                  <Node name="RecipeService.cs" selected="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Migrations" expanded="True">
+                <Node name="20210325030845_recipeIng-2.cs" expanded="True">
+                  <Node name="20210325030845_recipeIng-2.Designer.cs" selected="True" />
                 </Node>
               </Node>
+              <Node name="Models" expanded="True" />
             </Node>
           </Node>
         </State>
