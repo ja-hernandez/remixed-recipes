@@ -1,10 +1,13 @@
 ﻿<Properties StartupConfiguration="{F3709D46-ED28-4CD5-A9D4-A5F9A6D62680}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="remixed_recipes/Migrations/20210325215246_fix-icollection2.Designer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="remixed_recipes/Startup.cs">
     <Files>
-      <File FileName="remixed_recipes/Controllers/RecipeController.cs" Line="43" Column="32" />
+      <File FileName="remixed_recipes/Controllers/RecipeController.cs" Line="83" Column="28" />
       <File FileName="remixed_recipes/Migrations/20210325180136_fix-icollection.Designer.cs" Line="191" Column="1" />
       <File FileName="remixed_recipes/Migrations/20210325215246_fix-icollection2.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Migrations/20210325215246_fix-icollection2.Designer.cs" Line="18" Column="33" />
+      <File FileName="remixed_recipes/Migrations/20210325215246_fix-icollection2.Designer.cs" Line="19" Column="25" />
+      <File FileName="remixed_recipes/Models/Unit.cs" Line="10" Column="1" />
+      <File FileName="remixed_recipes/Models/Recipe.cs" Line="12" Column="9" />
+      <File FileName="remixed_recipes/Startup.cs" Line="32" Column="67" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,12 +19,10 @@
               <Node name="Migrations" expanded="True">
                 <Node name="20210325030845_recipeIng-2.cs" expanded="True" />
                 <Node name="20210325180136_fix-icollection.cs" expanded="True" />
-                <Node name="20210325215246_fix-icollection2.cs" expanded="True">
-                  <Node name="20210325215246_fix-icollection2.Designer.cs" selected="True" />
-                </Node>
               </Node>
               <Node name="Models" expanded="True" />
               <Node name="Properties" expanded="True" />
+              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>

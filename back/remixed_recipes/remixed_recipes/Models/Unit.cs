@@ -7,7 +7,7 @@ namespace remixed_recipes.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public ICollection<RecipeIngredient> RecipeIngredients { get; set; }
+
 
         public Unit()
         {

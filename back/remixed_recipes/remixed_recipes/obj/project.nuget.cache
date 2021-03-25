@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "xD5OVbEOK0HlnhzX5XvY87yaY9t50xecOH6ZDDXeEVP7ONJcE3Lsu/JvTod75elWxBPL/lWeHvANzn0/Col+Kg==",
+  "dgSpecHash": "t3ELmBSb//D8XCKzuaDZ2IuaBTmd+GqasuBx9MJz5Eu4cg+Vesn5viBTs2BtewKTujMD0GgIKjKpeDgjJUHz9g==",
   "success": true,
   "projectFilePath": "/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/remixed_recipes/remixed_recipes.csproj",
   "expectedPackageFiles": [
     "/Users/josehernandez/.nuget/packages/microsoft.aspnetcore.html.abstractions/2.2.0/microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
+    "/Users/josehernandez/.nuget/packages/microsoft.aspnetcore.jsonpatch/3.1.13/microsoft.aspnetcore.jsonpatch.3.1.13.nupkg.sha512",
+    "/Users/josehernandez/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/3.1.13/microsoft.aspnetcore.mvc.newtonsoftjson.3.1.13.nupkg.sha512",
     "/Users/josehernandez/.nuget/packages/microsoft.aspnetcore.razor/2.2.0/microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "/Users/josehernandez/.nuget/packages/microsoft.aspnetcore.razor.language/3.1.0/microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",
     "/Users/josehernandez/.nuget/packages/microsoft.aspnetcore.razor.runtime/2.2.0/microsoft.aspnetcore.razor.runtime.2.2.0.nupkg.sha512",
@@ -63,7 +65,8 @@
     "/Users/josehernandez/.nuget/packages/microsoft.win32.primitives/4.3.0/microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "/Users/josehernandez/.nuget/packages/microsoft.win32.registry/4.5.0/microsoft.win32.registry.4.5.0.nupkg.sha512",
     "/Users/josehernandez/.nuget/packages/netstandard.library/1.6.1/netstandard.library.1.6.1.nupkg.sha512",
-    "/Users/josehernandez/.nuget/packages/newtonsoft.json/11.0.2/newtonsoft.json.11.0.2.nupkg.sha512",
+    "/Users/josehernandez/.nuget/packages/newtonsoft.json/12.0.2/newtonsoft.json.12.0.2.nupkg.sha512",
+    "/Users/josehernandez/.nuget/packages/newtonsoft.json.bson/1.0.2/newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "/Users/josehernandez/.nuget/packages/npgsql/4.1.8/npgsql.4.1.8.nupkg.sha512",
     "/Users/josehernandez/.nuget/packages/npgsql.entityframeworkcore.postgresql/3.1.11/npgsql.entityframeworkcore.postgresql.3.1.11.nupkg.sha512",
     "/Users/josehernandez/.nuget/packages/npgsql.entityframeworkcore.postgresql.design/1.1.0/npgsql.entityframeworkcore.postgresql.design.1.1.0.nupkg.sha512",

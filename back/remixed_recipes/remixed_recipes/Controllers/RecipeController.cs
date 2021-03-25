@@ -86,7 +86,7 @@ namespace remixed_recipes.Controllers
         [HttpPost]
         public async Task<ActionResult<Recipe>> PostRecipe(Recipe recipe)
         {
-            _context.Recipes.Add(recipe);
+            await _context.Recipes.AddAsync(recipe);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetRecipe", new { id = recipe.Id }, recipe);
