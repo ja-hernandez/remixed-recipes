@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using remixed_recipes.Data;
@@ -9,9 +10,10 @@ using remixed_recipes.Data;
 namespace remixed_recipes.Migrations
 {
     [DbContext(typeof(ApiDBContext))]
-    partial class ApiDBContextModelSnapshot : ModelSnapshot
+    [Migration("20210325180136_fix-icollection")]
+    partial class fixicollection
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -163,11 +165,11 @@ namespace remixed_recipes.Migrations
                         .IsRequired();
 
                     b.HasOne("remixed_recipes.Models.Preparation", "Preparation")
-                        .WithMany()
+                        .WithMany("RecipeIngredients")
                         .HasForeignKey("PreparationId");
 
                     b.HasOne("remixed_recipes.Models.Quantity", "Quantity")
-                        .WithMany()
+                        .WithMany("RecipeIngredients")
                         .HasForeignKey("QuantityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

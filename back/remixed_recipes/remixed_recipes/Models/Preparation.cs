@@ -9,7 +9,6 @@ namespace remixed_recipes.Models
         [Key]
         public int Id { get; set; }
         public string Description { get; set; }
-        public ICollection<RecipeIngredient> RecipeIngredients { get; set; }
 
         public Preparation()
         {

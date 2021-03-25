@@ -37,8 +37,9 @@ namespace remixed_recipes.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Recipe>> GetRecipe(int id)
         {
-            var recipe = await _context.Recipes.FindAsync(id);
 
+            var recipe = await _context.Recipes.FirstOrDefaultAsync(m => m.Id == id);
+                
             if (recipe == null)
             {
                 return NotFound();
