@@ -7,6 +7,7 @@ namespace remixed_recipes.Models
     {
         [Key]
         public int Id { get; set; }
+        [Required]
         public string InstructionsText { get; set; }
         public int RecipeId { get; set; }
         public Recipe Recipe { get; set; }

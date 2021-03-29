@@ -27,6 +27,7 @@ namespace remixed_recipes.Migrations
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -42,6 +43,7 @@ namespace remixed_recipes.Migrations
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("InstructionsText")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<int>("RecipeId")
@@ -63,6 +65,7 @@ namespace remixed_recipes.Migrations
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -78,6 +81,7 @@ namespace remixed_recipes.Migrations
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -93,6 +97,7 @@ namespace remixed_recipes.Migrations
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -138,6 +143,7 @@ namespace remixed_recipes.Migrations
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -179,7 +185,7 @@ namespace remixed_recipes.Migrations
                         .IsRequired();
 
                     b.HasOne("remixed_recipes.Models.Unit", "Unit")
-                        .WithMany("RecipeIngredients")
+                        .WithMany()
                         .HasForeignKey("UnitId");
                 });
 #pragma warning restore 612, 618

@@ -16,6 +16,7 @@ namespace remixed_recipes.Data
         public DbSet<Quantity> Quantities { get; set; }
         public DbSet<Unit> Units { get; set; }
         public DbSet<Preparation> Preparations { get; set; }
+        public DbSet<Account> Accounts { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

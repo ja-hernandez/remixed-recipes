@@ -8,6 +8,7 @@ namespace remixed_recipes.Models
     {
         [Key]
         public int Id { get; set; }
+        [Required]
         public string Name { get; set; }
         public Instructions Instructions { get; set; }
 

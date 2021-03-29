@@ -14,7 +14,7 @@
         "outputPath": "/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/remixed_recipes/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/josehernandez/.nuget/NuGet/NuGet.Config"
+          "/Users/josehernandez/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -38,6 +38,26 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[2.11.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.13, )"
+            },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[3.1.13, )"
@@ -75,6 +95,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.1.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.9.0, )"
             }
           },
           "imports": [
