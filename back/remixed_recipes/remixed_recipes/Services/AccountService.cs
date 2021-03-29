@@ -1,4 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using AutoMapper;
+using BC = BCrypt.Net.BCrypt;
+using Microsoft.Extensions.Options;
+using remixed_recipes.Data;
+using remixed_recipes.Helpers;
+using remixed_recipes.Models.Accounts;
+using remixed_recipes.Models;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
+using System.Security.Cryptography;
+
 namespace remixed_recipes.Services
 {
     public interface IAccountService
@@ -20,13 +35,13 @@ namespace remixed_recipes.Services
 
     public class AccountService : IAccountService
     {
-        private readonly DataContext _context;
+        private readonly ApiDBContext _context;
         private readonly IMapper _mapper;
         private readonly AppSettings _appSettings;
         private readonly IEmailService _emailService;
 
         public AccountService(
-            DataContext context,
+            ApiDBContext context,
             IMapper mapper,
             IOptions<AppSettings> appSettings,
             IEmailService emailService)
@@ -45,7 +60,7 @@ namespace remixed_recipes.Services
                 throw new AppException("Email or password is incorrect");
 
             // authentication successful so generate jwt and refresh tokens
-            var jwtToken = generateJwtToken(account);
+            string jwtToken = generateJwtToken(account);
             var refreshToken = generateRefreshToken(ipAddress);
             account.RefreshTokens.Add(refreshToken);
 
@@ -113,7 +128,7 @@ namespace remixed_recipes.Services
 
             // first registered account is an admin
             var isFirstAccount = _context.Accounts.Count() == 0;
-            account.Role = isFirstAccount ? Role.Admin : Role.User;
+            account.Role = isFirstAccount ? RoleEnumeration.Admin : RoleEnumeration.User;
             account.Created = DateTime.UtcNow;
             account.VerificationToken = randomTokenString();
 

@@ -2,7 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using remixed_recipes.Helpers;
+using remixed_recipes.Models;
+using remixed_recipes.Models.Accounts;
 using remixed_recipes.Services;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -52,7 +57,7 @@ namespace remixed_recipes.Controllers
                 return BadRequest(new { message = "Token is required" });
 
             // users can revoke their own tokens and admins can revoke any tokens
-            if (!Account.OwnsToken(token) && Account.Role != Role.Admin)
+            if (!Account.OwnsToken(token) && Account.Role != RoleEnumeration.Admin)
                 return Unauthorized(new { message = "Unauthorized" });
 
             _accountService.RevokeToken(token, ipAddress());
@@ -94,7 +99,7 @@ namespace remixed_recipes.Controllers
             return Ok(new { message = "Password reset successful, you can now login" });
         }
 
-        [Authorize(Role.Admin)]
+        [Authorize(RoleEnumeration.Admin)]
         [HttpGet]
         public ActionResult<IEnumerable<AccountResponse>> GetAll()
         {
@@ -107,14 +112,14 @@ namespace remixed_recipes.Controllers
         public ActionResult<AccountResponse> GetById(int id)
         {
             // users can get their own account and admins can get any account
-            if (id != Account.Id && Account.Role != Role.Admin)
+            if (id != Account.Id && Account.Role != RoleEnumeration.Admin)
                 return Unauthorized(new { message = "Unauthorized" });
 
             var account = _accountService.GetById(id);
             return Ok(account);
         }
 
-        [Authorize(Role.Admin)]
+        [Authorize(RoleEnumeration.Admin)]
         [HttpPost]
         public ActionResult<AccountResponse> Create(CreateRequest model)
         {
@@ -127,11 +132,11 @@ namespace remixed_recipes.Controllers
         public ActionResult<AccountResponse> Update(int id, UpdateRequest model)
         {
             // users can update their own account and admins can update any account
-            if (id != Account.Id && Account.Role != Role.Admin)
+            if (id != Account.Id && Account.Role != RoleEnumeration.Admin)
                 return Unauthorized(new { message = "Unauthorized" });
 
             // only admins can update role
-            if (Account.Role != Role.Admin)
+            if (Account.Role != RoleEnumeration.Admin)
                 model.Role = null;
 
             var account = _accountService.Update(id, model);
@@ -143,7 +148,7 @@ namespace remixed_recipes.Controllers
         public IActionResult Delete(int id)
         {
             // users can delete their own account and admins can delete any account
-            if (id != Account.Id && Account.Role != Role.Admin)
+            if (id != Account.Id && Account.Role != RoleEnumeration.Admin)
                 return Unauthorized(new { message = "Unauthorized" });
 
             _accountService.Delete(id);
@@ -170,3 +175,4 @@ namespace remixed_recipes.Controllers
                 return HttpContext.Connection.RemoteIpAddress.MapToIPv4().ToString();
         }
     }
+}

@@ -12,6 +12,7 @@
     <Folder Include="DTOs\" />
     <Folder Include="Services\" />
     <Folder Include="Models\Accounts\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.11" />
