@@ -1,4 +1,11 @@
 ﻿using System;
+using MailKit.Net.Smtp;
+using MailKit.Security;
+using Microsoft.Extensions.Options;
+using MimeKit;
+using MimeKit.Text;
+using remixed_recipes.Helpers;
+
 namespace remixed_recipes.Services
 {
     public interface IEmailService

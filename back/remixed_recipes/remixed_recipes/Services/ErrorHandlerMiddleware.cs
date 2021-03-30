@@ -50,4 +50,3 @@ namespace remixed_recipes.Services
         }
     }
 }
-}

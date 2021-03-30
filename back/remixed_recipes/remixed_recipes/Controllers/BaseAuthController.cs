@@ -9,6 +9,7 @@ using remixed_recipes.Models;
 
 namespace remixed_recipes.Controllers
 {
+    [Controller]
     public abstract class BaseAuthController : ControllerBase
     {
         public Account Account => (Account)HttpContext.Items["Account"];

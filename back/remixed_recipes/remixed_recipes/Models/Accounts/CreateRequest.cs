@@ -14,7 +14,7 @@ namespace remixed_recipes.Models.Accounts
         public string LastName { get; set; }
 
         [Required]
-        [EnumDataType(typeof(RoleEnumeration))]
+        [EnumDataType(typeof(Role))]
         public string Role { get; set; }
 
         [Required]

@@ -11,11 +11,11 @@ namespace remixed_recipes.Helpers
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
     public class AuthorizeAttribute : Attribute, IAuthorizationFilter
     {
-        private readonly IList<RoleEnumeration> _roles;
+        private readonly IList<Role> _roles;
 
-        public AuthorizeAttribute(params RoleEnumeration[] roles)
+        public AuthorizeAttribute(params Role[] roles)
         {
-            _roles = roles ?? new RoleEnumeration[] { };
+            _roles = roles ?? new Role[] { };
         }
 
         public void OnAuthorization(AuthorizationFilterContext context)

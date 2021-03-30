@@ -14,7 +14,7 @@
         "outputPath": "/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/remixed_recipes/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/josehernandez/.config/NuGet/NuGet.Config"
+          "/Users/josehernandez/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
