@@ -1,31 +1,13 @@
 ﻿<Properties StartupConfiguration="{F3709D46-ED28-4CD5-A9D4-A5F9A6D62680}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="remixed_recipes/Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="remixed_recipes/Services/AccountService.cs">
     <Files>
-      <File FileName="remixed_recipes/Models/RefreshToken.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Models/RoleEnumeration.cs" Line="4" Column="21" />
-      <File FileName="remixed_recipes/Models/Account.cs" Line="6" Column="18" />
-      <File FileName="remixed_recipes/Services/ErrorHandlerMiddleware.cs" Line="52" Column="2" />
-      <File FileName="remixed_recipes/appsettings.json" Line="3" Column="5" />
-      <File FileName="remixed_recipes/appsettings.Development.json" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Services/EmailService.cs" Line="36" Column="79" />
-      <File FileName="remixed_recipes/Controllers/AccountController.cs" Line="109" Column="1" />
-      <File FileName="remixed_recipes/Helpers/AuthorizeAttribute.cs" Line="23" Column="70" />
-      <File FileName="remixed_recipes/Controllers/BaseAuthController.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Models/Accounts/AccountResponse.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Models/Accounts/AuthenticateRequest.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Models/Accounts/AuthenticateResponse.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Models/Accounts/CreateRequest.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Models/Accounts/ForgotPasswordRequest.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Models/Accounts/RegisterRequest.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Models/Accounts/ResetPasswordRequest.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Models/Accounts/RevokeTokenRequest.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Models/Accounts/UpdateRequest.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Models/Accounts/ValidateResetTokenRequest.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Models/Accounts/VerifyEmailRequest.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Services/AccountService.cs" Line="63" Column="48" />
-      <File FileName="remixed_recipes/Migrations/20210329212857_AddAuth.Designer.cs" Line="24" Column="57" />
-      <File FileName="remixed_recipes/Services/JwtMiddleware.cs" Line="60" Column="1" />
-      <File FileName="remixed_recipes/Startup.cs" Line="1" Column="1" />
+      <File FileName="remixed_recipes/Helpers/AuthorizeAttribute.cs" Line="21" Column="1" />
+      <File FileName="remixed_recipes/Data/ApiDBContext.cs" Line="49" Column="64" />
+      <File FileName="remixed_recipes/Models/BaseEntity.cs" Line="9" Column="24" />
+      <File FileName="remixed_recipes/Services/UserService.cs" Line="18" Column="26" />
+      <File FileName="remixed_recipes/Startup.cs" Line="46" Column="1" />
+      <File FileName="remixed_recipes/Controllers/RecipeController.cs" Line="24" Column="1" />
+      <File FileName="remixed_recipes/Services/AccountService.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -35,20 +17,19 @@
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
               <Node name="Helpers" expanded="True" />
-              <Node name="Migrations" expanded="True">
-                <Node name="20210329212857_AddAuth.cs" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Accounts" expanded="True" />
               </Node>
-              <Node name="Models" expanded="True" />
-              <Node name="Services" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="AccountService.cs" selected="True" />
+              </Node>
               <Node name="appsettings.json" expanded="True" />
-              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State>
-          <Value>context.HttpContext.Items</Value>
           <Value>account</Value>
         </State>
       </Pad>
@@ -58,15 +39,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/remixed_recipes/Controllers/AccountsController.cs" relfile="remixed_recipes/Controllers/AccountsController.cs" line="105" column="1" />
-      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/remixed_recipes/Controllers/AccountsController.cs" relfile="remixed_recipes/Controllers/AccountsController.cs" line="107" column="1" />
-      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/remixed_recipes/Services/JwtMiddleware.cs" relfile="remixed_recipes/Services/JwtMiddleware.cs" line="36" column="1" />
-      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/remixed_recipes/Services/JwtMiddleware.cs" relfile="remixed_recipes/Services/JwtMiddleware.cs" line="41" column="1" />
-      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/remixed_recipes/Services/JwtMiddleware.cs" relfile="remixed_recipes/Services/JwtMiddleware.cs" line="55" column="1" />
-      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/remixed_recipes/Services/JwtMiddleware.cs" relfile="remixed_recipes/Services/JwtMiddleware.cs" line="58" column="1" />
       <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/remixed_recipes/Helpers/AuthorizeAttribute.cs" relfile="remixed_recipes/Helpers/AuthorizeAttribute.cs" line="21" column="1" />
       <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/remixed_recipes/Helpers/AuthorizeAttribute.cs" relfile="remixed_recipes/Helpers/AuthorizeAttribute.cs" line="24" column="1" />
-      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/remixed_recipes/Helpers/AuthorizeAttribute.cs" relfile="remixed_recipes/Helpers/AuthorizeAttribute.cs" line="18" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

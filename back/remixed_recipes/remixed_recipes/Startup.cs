@@ -32,16 +32,26 @@ namespace remixed_recipes
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.IgnoreNullValues = true);
+            //services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.IgnoreNullValues = true);
             var connectionString = "host=localhost;port=5432;database=recipedb;username=recipeadmin;password=recipeadmin";
+
 
             services.AddDbContext<ApiDBContext>(options =>
             options.UseNpgsql(connectionString));
 
+            services.AddHttpContextAccessor();
+
+            services.AddTransient<UserService>();
+
             services.AddCors();
 
             services.AddControllers().AddNewtonsoftJson(options =>
-            options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+            {
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
+            }
+            
+            );
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
@@ -85,16 +95,6 @@ namespace remixed_recipes
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
-
-            app.UseRouting();
-
-            app.UseAuthorization();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
 
             app.UseSwagger();
 
@@ -103,6 +103,8 @@ namespace remixed_recipes
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Remixed Recipes v1");
             }
             );
+
+            app.UseRouting();
 
             app.UseCors(x => x
                 .SetIsOriginAllowed(origin => true)
@@ -116,7 +118,10 @@ namespace remixed_recipes
             // custom jwt auth middleware
             app.UseMiddleware<JwtMiddleware>();
 
-            app.UseEndpoints(x => x.MapControllers());
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
 
         }
     }

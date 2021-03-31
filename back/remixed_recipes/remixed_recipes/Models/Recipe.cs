@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace remixed_recipes.Models
 {
-    public class Recipe
+    public class Recipe : BaseEntity
     {
         [Key]
         public int Id { get; set; }

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using remixed_recipes.Data;
 using remixed_recipes.Models;
+using remixed_recipes.Services;
 
 namespace remixed_recipes.Controllers
 {
