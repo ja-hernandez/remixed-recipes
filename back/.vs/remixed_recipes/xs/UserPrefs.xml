@@ -1,10 +1,12 @@
-﻿<Properties>
+﻿<Properties StartupConfiguration="{F3709D46-ED28-4CD5-A9D4-A5F9A6D62680}|Default">
   <MonoDevelop.Ide.ItemProperties.RemixedRecipes PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="remixed_recipes" expanded="True" selected="True" />
+          <Node name="remixed_recipes" expanded="True" selected="True">
+            <Node name="remixed_recipes" expanded="True" />
+          </Node>
         </State>
       </Pad>
     </Pads>
@@ -16,4 +18,5 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.remixed__recipes PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
 </Properties>
