@@ -1,34 +1,39 @@
-import { NgModule, APP_INITIALIZER } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
-
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { JwtInterceptor, ErrorInterceptor, appInitializer } from './_helpers';
-import { AuthenticationService } from './_services';
-import { HomeComponent } from './home';
-import { LoginComponent } from './login';
-import { AppRoutingModule } from "./app-routing.module";
-import { AuthGuard } from './_helpers';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
+import { RecipeAdminComponent } from './recipe-admin/recipe-admin.component';
+import { RecipeUserComponent } from './recipe-user/recipe-user.component';
+import { AddRecipeComponent } from './add-recipe/add-recipe.component';
+import { ForkRecipeComponent } from './fork-recipe/fork-recipe.component';
+import { authInterceptorProviders } from './_helpers/auth.interceptor';
 
 @NgModule({
-    imports: [
-        BrowserModule,
-        ReactiveFormsModule,
-        HttpClientModule,
-        AppRoutingModule
-    ],
-    declarations: [
-        AppComponent,
-        HomeComponent,
-        LoginComponent
-    ],
-    providers: [
-        { provide: APP_INITIALIZER, useFactory: appInitializer, multi: true, deps: [AuthenticationService] },
-        { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-    ],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent,
+    ProfileComponent,
+    RecipeAdminComponent,
+    RecipeUserComponent,
+    AddRecipeComponent,
+    ForkRecipeComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+  ],
+  providers: [authInterceptorProviders],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

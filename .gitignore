@@ -6,6 +6,6 @@ obj/
 # Common node modules locations
 /node_modules
 /wwwroot/node_modules
-/front/node_modules
+/front/remixedrecipes/node_modules
 
 
