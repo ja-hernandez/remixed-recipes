@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { AuthenticationService } from './_services';
 import { User } from './_models';
 
-@Component({ selector: 'remixed-recipes', templateUrl: 'app.component.html' })
+@Component({ selector: 'app-root', templateUrl: './app.component.html' })
 export class AppComponent {
     user: User = new User();
 
@@ -15,3 +15,4 @@ export class AppComponent {
         this.authenticationService.logout();
     }
 }
+

@@ -3,13 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
 
+import { AppComponent } from './app.component';
 import { JwtInterceptor, ErrorInterceptor, appInitializer } from './_helpers';
 import { AuthenticationService } from './_services';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
+import { AppRoutingModule } from "./app-routing.module";
+import { AuthGuard } from './_helpers';
 
 @NgModule({
     imports: [
