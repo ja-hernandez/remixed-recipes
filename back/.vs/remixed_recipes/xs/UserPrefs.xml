@@ -1,22 +1,17 @@
-﻿<Properties StartupConfiguration="{E40F5FE6-D102-4CB5-B262-7820B5EFF235}|Default">
+﻿<Properties>
   <MonoDevelop.Ide.ItemProperties.RemixedRecipes PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="remixed_recipes" expanded="True">
-            <Node name="RemixedRecipes" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="appsettings.json" expanded="True" selected="True" />
-            </Node>
-          </Node>
+          <Node name="remixed_recipes" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
