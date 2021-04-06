@@ -44,15 +44,15 @@ namespace remixed_recipes.Data
             return (await base.SaveChangesAsync(true, cancellationToken));
         }
 
-        public override int SaveChanges()
-        {
-            _currentAccount = _userService.GetNameIdentifier();
-            var account = Accounts.Single(x => x.Email == _currentAccount);
+        //public override int SaveChanges()
+        //{
+        //    _currentAccount = _userService.GetNameIdentifier();
+        //    var account = Accounts.Single(x => x.Email == _currentAccount);
 
-            AddCreateInfo(account);
+        //    AddCreateInfo(account);
 
-            return base.SaveChanges();
-        }
+        //    return base.SaveChanges();
+        //}
 
         public void AddCreateInfo(Account account)
         {

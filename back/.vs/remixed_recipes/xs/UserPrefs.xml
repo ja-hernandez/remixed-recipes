@@ -1,11 +1,27 @@
 ﻿<Properties StartupConfiguration="{F3709D46-ED28-4CD5-A9D4-A5F9A6D62680}|Default">
   <MonoDevelop.Ide.ItemProperties.RemixedRecipes PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="remixed_recipes/Controllers/AccountsController.cs">
+    <Files>
+      <File FileName="remixed_recipes/Data/ApiDBContext.cs" Line="55" Column="12" />
+      <File FileName="remixed_recipes/Services/UserService.cs" Line="20" Column="6" />
+      <File FileName="remixed_recipes/Models/Accounts/AuthenticateRequest.cs" Line="1" Column="1" />
+      <File FileName="remixed_recipes/Models/Accounts/AuthenticateResponse.cs" Line="1" Column="1" />
+      <File FileName="remixed_recipes/Controllers/AccountsController.cs" Line="1" Column="1" />
+      <File FileName="remixed_recipes/Services/AccountService.cs" Line="71" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="remixed_recipes" expanded="True" selected="True">
-            <Node name="remixed_recipes" expanded="True" />
+          <Node name="remixed_recipes" expanded="True">
+            <Node name="remixed_recipes" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="AccountsController.cs" selected="True" />
+              </Node>
+              <Node name="Data" expanded="True" />
+              <Node name="Helpers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
@@ -15,7 +31,18 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Services/UserService.cs" relfile="remixed_recipes/Services/UserService.cs" line="19" column="1" />
+      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Services/UserService.cs" relfile="remixed_recipes/Services/UserService.cs" line="18" column="1" />
+      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Data/ApiDBContext.cs" relfile="remixed_recipes/Data/ApiDBContext.cs" line="49" column="1" />
+      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Data/ApiDBContext.cs" relfile="remixed_recipes/Data/ApiDBContext.cs" line="50" column="1" />
+      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Data/ApiDBContext.cs" relfile="remixed_recipes/Data/ApiDBContext.cs" line="52" column="1" />
+      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Data/ApiDBContext.cs" relfile="remixed_recipes/Data/ApiDBContext.cs" line="54" column="1" />
+      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Controllers/AccountsController.cs" relfile="remixed_recipes/Controllers/AccountsController.cs" line="102" column="1" />
+      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Controllers/AccountsController.cs" relfile="remixed_recipes/Controllers/AccountsController.cs" line="104" column="1" />
+      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Controllers/AccountsController.cs" relfile="remixed_recipes/Controllers/AccountsController.cs" line="105" column="1" />
+      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Controllers/AccountsController.cs" relfile="remixed_recipes/Controllers/AccountsController.cs" line="106" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.remixed__recipes PreferredExecutionTarget="/Applications/Microsoft Edge.app" />

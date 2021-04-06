@@ -14,6 +14,8 @@ import { RecipeUserComponent } from './recipe-user/recipe-user.component';
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { ForkRecipeComponent } from './fork-recipe/fork-recipe.component';
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
+import { MatchPasswordDirective } from './_directives/match-password.directive';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { authInterceptorProviders } from './_helpers/auth.interceptor';
     RecipeAdminComponent,
     RecipeUserComponent,
     AddRecipeComponent,
-    ForkRecipeComponent
+    ForkRecipeComponent,
+    MatchPasswordDirective
   ],
   imports: [
     BrowserModule,
