@@ -1,25 +1,27 @@
 ﻿<Properties StartupConfiguration="{F3709D46-ED28-4CD5-A9D4-A5F9A6D62680}|Default">
   <MonoDevelop.Ide.ItemProperties.RemixedRecipes PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="remixed_recipes/Controllers/RecipeController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="remixed_recipes/exampleRecipePostBody.json">
     <Files>
       <File FileName="remixed_recipes/Data/ApiDBContext.cs" Line="55" Column="12" />
-      <File FileName="remixed_recipes/Controllers/RecipeController.cs" Line="170" Column="48" />
+      <File FileName="remixed_recipes/Controllers/RecipeController.cs" Line="185" Column="1" />
       <File FileName="remixed_recipes/exampleExtRecipe1.json" Line="2" Column="9" />
       <File FileName="remixed_recipes/Startup.cs" Line="1" Column="1" />
       <File FileName="remixed_recipes/Models/Recipe.cs" Line="1" Column="1" />
+      <File FileName="remixed_recipes/Models/BaseEntity.cs" Line="11" Column="23" />
+      <File FileName="remixed_recipes/Models/Account.cs" Line="1" Column="1" />
+      <File FileName="remixed_recipes/exampleRecipePostBody.json" Line="4" Column="12" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="remixed_recipes" expanded="True">
             <Node name="remixed_recipes" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="RecipeController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
               <Node name="Helpers" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Services" expanded="True" />
+              <Node name="exampleRecipePostBody.json" selected="True" />
             </Node>
           </Node>
         </State>

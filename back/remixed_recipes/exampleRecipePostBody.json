@@ -1,0 +1,40 @@
+﻿{
+  "createdDate": "2021-04-08T02:49:44.698Z",
+  "createdBy": {
+    "id": 0
+  },
+  "id": 0,
+  "name": "string",
+  "instructions": {
+    "id": 0,
+    "instructionsText": "string",
+    "recipeId": 0
+  },
+  "rating": 0,
+  "image": "string",
+  "recipeIngredients": [
+    {
+      "recipeId": 0,
+      "ingredient": {
+        "id": 0,
+        "name": "string"
+      },
+      "ingredientId": 0,
+      "quantity": {
+        "id": 0,
+        "name": "string"
+      },
+      "quantityId": 0,
+      "unit": {
+        "id": 0,
+        "name": "string"
+      },
+      "unitId": 0,
+      "preparation": {
+        "id": 0,
+        "description": "string"
+      },
+      "preparationId": 0
+    }
+  ]
+}

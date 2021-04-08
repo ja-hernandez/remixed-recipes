@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json.Linq;
 using remixed_recipes.Data;
 using remixed_recipes.Helpers;
 using remixed_recipes.Models;
@@ -155,30 +156,31 @@ namespace remixed_recipes.Controllers
             return recipe;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<Recipe>> AddExtRecipe()
-        {
-            Recipe recipe = new Recipe();
-            var recipeApiKey = _config["Recipes:ApiKey"];
-            var request = new HttpRequestMessage(HttpMethod.Get, "https://api.spoonacular.com/recipes/random?apiKey=" + recipeApiKey + "&limitLicense=true&number=1");
+        //[HttpGet]
+        //public async Task<ActionResult<Recipe>> AddExtRecipe()
+        //{
+        //    Recipe recipe = new Recipe();
+        //    var recipeApiKey = _config["Recipes:ApiKey"];
+        //    var request = new HttpRequestMessage(HttpMethod.Get, "https://api.spoonacular.com/recipes/random?apiKey=" + recipeApiKey + "&limitLicense=true&number=1");
 
-            var client = _clientFactory.CreateClient();
-            var response = await client.SendAsync(request);
+        //    var client = _clientFactory.CreateClient();
+        //    var response = await client.SendAsync(request);
 
-            if (response.IsSuccessStatusCode)
-            {
-                using var responseStream = await response.Content.ReadAsStreamAsync();
-                
-
-
-                await _context.Recipes.AddAsync(recipe);
-                await _context.SaveChangesAsync();
-                return CreatedAtAction("GetRecipe", new { id = recipe.Id }, recipe);
-            }
-            else return BadRequest();
+        //    if (response.IsSuccessStatusCode)
+        //    {
+        //        var responseStream = await response.Content.ReadAsStringAsync();
+        //        JObject returnedRecipe = JObject.Parse(responseStream);
 
 
-        }
+
+        //        await _context.Recipes.AddAsync(recipe);
+        //        await _context.SaveChangesAsync();
+        //        return CreatedAtAction("GetRecipe", new { id = recipe.Id }, recipe);
+        //    }
+        //    else return BadRequest();
+
+
+        //}
 
 
         private bool RecipeExists(int id)
