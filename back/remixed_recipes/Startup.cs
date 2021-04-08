@@ -35,10 +35,12 @@ namespace remixed_recipes
             //services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.IgnoreNullValues = true);
             var connectionString = "host=localhost;port=5432;database=recipedb;username=recipeadmin;password=recipeadmin";
 
+            var _RecipesApiKey = Configuration["Recipes:ApiKey"];
 
             services.AddDbContext<ApiDBContext>(options =>
             options.UseNpgsql(connectionString));
 
+            services.AddHttpClient();
             services.AddHttpContextAccessor();
 
             services.AddTransient<UserService>();
@@ -94,7 +96,6 @@ namespace remixed_recipes
             {
                 app.UseDeveloperExceptionPage();
             }
-
 
             app.UseSwagger();
 

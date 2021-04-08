@@ -1,11 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using remixed_recipes.Data;
+using remixed_recipes.Helpers;
 using remixed_recipes.Models;
 using remixed_recipes.Services;
 
@@ -17,10 +21,15 @@ namespace remixed_recipes.Controllers
     public class RecipeController : ControllerBase
     {
         private readonly ApiDBContext _context;
+        private readonly IConfiguration _config;
+        private readonly IHttpClientFactory _clientFactory;
 
-        public RecipeController(ApiDBContext context)
+
+        public RecipeController(ApiDBContext context, IConfiguration config, IHttpClientFactory clientFactory)
         {
             _context = context;
+            _config = config;
+            _clientFactory = clientFactory;
         }
 
         // GET: api/Recipe
@@ -80,6 +89,7 @@ namespace remixed_recipes.Controllers
         // PUT: api/Recipe/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutRecipe(int id, Recipe recipe)
         {
@@ -112,6 +122,7 @@ namespace remixed_recipes.Controllers
         // POST: api/Recipe
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<Recipe>> PostRecipe(Recipe recipe)
         {
@@ -128,6 +139,7 @@ namespace remixed_recipes.Controllers
         ///<remarks>
         /// </remarks>
         // DELETE: api/Recipe/5
+        [Authorize(Role.Admin)]
         [HttpDelete("{id}")]
         public async Task<ActionResult<Recipe>> DeleteRecipe(int id)
         {
@@ -142,6 +154,32 @@ namespace remixed_recipes.Controllers
 
             return recipe;
         }
+
+        [HttpGet]
+        public async Task<ActionResult<Recipe>> AddExtRecipe()
+        {
+            Recipe recipe = new Recipe();
+            var recipeApiKey = _config["Recipes:ApiKey"];
+            var request = new HttpRequestMessage(HttpMethod.Get, "https://api.spoonacular.com/recipes/random?apiKey=" + recipeApiKey + "&limitLicense=true&number=1");
+
+            var client = _clientFactory.CreateClient();
+            var response = await client.SendAsync(request);
+
+            if (response.IsSuccessStatusCode)
+            {
+                using var responseStream = await response.Content.ReadAsStreamAsync();
+                
+
+
+                await _context.Recipes.AddAsync(recipe);
+                await _context.SaveChangesAsync();
+                return CreatedAtAction("GetRecipe", new { id = recipe.Id }, recipe);
+            }
+            else return BadRequest();
+
+
+        }
+
 
         private bool RecipeExists(int id)
         {

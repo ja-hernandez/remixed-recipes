@@ -1,13 +1,12 @@
 ﻿<Properties StartupConfiguration="{F3709D46-ED28-4CD5-A9D4-A5F9A6D62680}|Default">
   <MonoDevelop.Ide.ItemProperties.RemixedRecipes PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="remixed_recipes/Controllers/AccountsController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="remixed_recipes/Controllers/RecipeController.cs">
     <Files>
       <File FileName="remixed_recipes/Data/ApiDBContext.cs" Line="55" Column="12" />
-      <File FileName="remixed_recipes/Services/UserService.cs" Line="20" Column="6" />
-      <File FileName="remixed_recipes/Models/Accounts/AuthenticateRequest.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Models/Accounts/AuthenticateResponse.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Controllers/AccountsController.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Services/AccountService.cs" Line="71" Column="1" />
+      <File FileName="remixed_recipes/Controllers/RecipeController.cs" Line="170" Column="48" />
+      <File FileName="remixed_recipes/exampleExtRecipe1.json" Line="2" Column="9" />
+      <File FileName="remixed_recipes/Startup.cs" Line="1" Column="1" />
+      <File FileName="remixed_recipes/Models/Recipe.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,7 +14,7 @@
           <Node name="remixed_recipes" expanded="True">
             <Node name="remixed_recipes" expanded="True">
               <Node name="Controllers" expanded="True">
-                <Node name="AccountsController.cs" selected="True" />
+                <Node name="RecipeController.cs" selected="True" />
               </Node>
               <Node name="Data" expanded="True" />
               <Node name="Helpers" expanded="True" />
