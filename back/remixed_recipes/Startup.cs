@@ -33,12 +33,13 @@ namespace remixed_recipes
         public void ConfigureServices(IServiceCollection services)
         {
             //services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.IgnoreNullValues = true);
-            var connectionString = "host=localhost;port=5432;database=recipedb;username=recipeadmin;password=recipeadmin";
+            var connectionString = "host=localhost;port=5432;database=recipedb;username=recipeadmin;password=recipeadmin;Include Error Detail=true;";
 
             var _RecipesApiKey = Configuration["Recipes:ApiKey"];
 
             services.AddDbContext<ApiDBContext>(options =>
-            options.UseNpgsql(connectionString));
+            options.UseNpgsql(connectionString).EnableSensitiveDataLogging(true).EnableDetailedErrors(true)
+            );
 
             services.AddHttpClient();
             services.AddHttpContextAccessor();

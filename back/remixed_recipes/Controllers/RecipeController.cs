@@ -8,36 +8,49 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using remixed_recipes.Data;
 using remixed_recipes.Helpers;
 using remixed_recipes.Models;
 using remixed_recipes.Services;
+using remixed_recipes.Controllers;
+using remixed_recipes.Models.Accounts;
 
 namespace remixed_recipes.Controllers
 {
+    [Authorize]
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class RecipeController : ControllerBase
+    public class RecipeController : BaseAuthController
     {
         private readonly ApiDBContext _context;
         private readonly IConfiguration _config;
         private readonly IHttpClientFactory _clientFactory;
+        private readonly IAccountService _accountService;
 
 
-        public RecipeController(ApiDBContext context, IConfiguration config, IHttpClientFactory clientFactory)
+        public RecipeController(ApiDBContext context, IConfiguration config, IHttpClientFactory clientFactory, IAccountService accountService)
         {
             _context = context;
             _config = config;
             _clientFactory = clientFactory;
+            _accountService = accountService;
         }
 
         // GET: api/Recipe
-       ///<summary>
-       ///Pulls all recipes
-       /// </summary>
+        ///<summary>
+        ///Pulls all recipes
+        /// </summary>
 
+        [HttpPost("authenticate")]
+        public ActionResult<AuthenticateResponse> Authenticate(AuthenticateRequest model)
+        {
+            var response = _accountService.Authenticate(model, ipAddress());
+            setTokenCookie(response.RefreshToken);
+            return Ok(response);
+        }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Recipe>>> GetRecipes()
@@ -78,7 +91,7 @@ namespace remixed_recipes.Controllers
                 .ThenInclude(ri => ri.Preparation)
                 .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.Id == id);
-                
+
             if (recipe == null)
             {
                 return NotFound();
@@ -128,9 +141,18 @@ namespace remixed_recipes.Controllers
         public async Task<ActionResult<Recipe>> PostRecipe(Recipe recipe)
         {
             await _context.Recipes.AddAsync(recipe);
-            await _context.SaveChangesAsync();
+            try
+            {
+                await _context.SaveChangesAsync();
+                return CreatedAtAction("GetRecipe", new { id = recipe.Id }, recipe);
+            }
+            catch
+            {
+                throw;
+            }
 
-            return CreatedAtAction("GetRecipe", new { id = recipe.Id }, recipe);
+
+
         }
 
         /// <summary>
@@ -156,31 +178,72 @@ namespace remixed_recipes.Controllers
             return recipe;
         }
 
-        //[HttpGet]
-        //public async Task<ActionResult<Recipe>> AddExtRecipe()
-        //{
-        //    Recipe recipe = new Recipe();
-        //    var recipeApiKey = _config["Recipes:ApiKey"];
-        //    var request = new HttpRequestMessage(HttpMethod.Get, "https://api.spoonacular.com/recipes/random?apiKey=" + recipeApiKey + "&limitLicense=true&number=1");
+        [HttpGet("GetExt")]
+        public async Task<ActionResult<Recipe>> AddExtRecipe()
+        {
+            Recipe recipe = new Recipe();
+            var recipeApiKey = _config["Recipes:ApiKey"];
+            var request = new HttpRequestMessage(HttpMethod.Get, "https://api.spoonacular.com/recipes/random?apiKey=" + recipeApiKey + "&limitLicense=true&number=1");
 
-        //    var client = _clientFactory.CreateClient();
-        //    var response = await client.SendAsync(request);
+            var client = _clientFactory.CreateClient();
+            var response = await client.SendAsync(request);
 
-        //    if (response.IsSuccessStatusCode)
-        //    {
-        //        var responseStream = await response.Content.ReadAsStringAsync();
-        //        JObject returnedRecipe = JObject.Parse(responseStream);
+            if (response.IsSuccessStatusCode)
+            {
+                var responseStream = await response.Content.ReadAsStringAsync();
+                JObject returnedRecipe = JObject.Parse(responseStream);
+
+                IList<JToken> recipeIngredients = returnedRecipe["recipes"][0]["extendedIngredients"].Children().ToList();
+                JToken recipeName = returnedRecipe["recipes"][0]["title"].ToString();
+                JToken recipeInstructions = returnedRecipe["recipes"][0]["instructions"].ToString();
+                JToken recipeImage = returnedRecipe["recipes"][0]["image"].ToString();
+
+                JObject recipeJson =
+                    new JObject(
+                        new JProperty("createdDate", DateTime.UtcNow),
+                        new JProperty("createdBy",
+                            new JObject(
+                                new JProperty("id", 1)
+                                )
+                            ),
+                        new JProperty("name", ""),
+                        new JProperty("instructions",
+                            new JObject(
+                                new JProperty("")
+                        )));
+
+                IList<RecipeIngredient> parsedRecIngredients = new List<RecipeIngredient>();
 
 
+                recipe.Name = recipeName.ToString();
+                recipe.Instructions.InstructionsText = recipeInstructions.ToString();
 
-        //        await _context.Recipes.AddAsync(recipe);
-        //        await _context.SaveChangesAsync();
-        //        return CreatedAtAction("GetRecipe", new { id = recipe.Id }, recipe);
-        //    }
-        //    else return BadRequest();
+                return recipe;
+            }
+            else return BadRequest();
 
 
-        //}
+        }
+
+        // helper methods
+
+        private void setTokenCookie(string token)
+        {
+            var cookieOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                Expires = DateTime.UtcNow.AddDays(7)
+            };
+            Response.Cookies.Append("refreshToken", token, cookieOptions);
+        }
+
+        private string ipAddress()
+        {
+            if (Request.Headers.ContainsKey("X-Forwarded-For"))
+                return Request.Headers["X-Forwarded-For"];
+            else
+                return HttpContext.Connection.RemoteIpAddress.MapToIPv4().ToString();
+        }
 
 
         private bool RecipeExists(int id)
@@ -189,3 +252,4 @@ namespace remixed_recipes.Controllers
         }
     }
 }
+

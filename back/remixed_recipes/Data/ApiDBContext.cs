@@ -34,15 +34,15 @@ namespace remixed_recipes.Data
 
         }
 
-        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            _currentAccount = _userService.GetNameIdentifier();
-            var account = await Accounts.SingleAsync(x => x.Email == _currentAccount);
+        //public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken))
+        //{
+        //    _currentAccount = _userService.GetNameIdentifier();
+        //    var account = await Accounts.SingleAsync(x => x.Email == _currentAccount);
 
-            AddCreateInfo(account);
+        //    AddCreateInfo(account);
 
-            return (await base.SaveChangesAsync(true, cancellationToken));
-        }
+        //    return (await base.SaveChangesAsync(true, cancellationToken));
+        //}
 
         //public override int SaveChanges()
         //{

@@ -1,15 +1,30 @@
 ﻿<Properties StartupConfiguration="{F3709D46-ED28-4CD5-A9D4-A5F9A6D62680}|Default">
   <MonoDevelop.Ide.ItemProperties.RemixedRecipes PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="remixed_recipes/exampleRecipePostBody.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="remixed_recipes/Models/Account.cs">
     <Files>
-      <File FileName="remixed_recipes/Data/ApiDBContext.cs" Line="55" Column="12" />
-      <File FileName="remixed_recipes/Controllers/RecipeController.cs" Line="185" Column="1" />
-      <File FileName="remixed_recipes/exampleExtRecipe1.json" Line="2" Column="9" />
-      <File FileName="remixed_recipes/Startup.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Models/Recipe.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/Models/BaseEntity.cs" Line="11" Column="23" />
+      <File FileName="remixed_recipes/Controllers/RecipeController.cs" Line="29" Column="58" />
+      <File FileName="remixed_recipes/exampleExtRecipe1.json" />
+      <File FileName="remixed_recipes/exampleRecipePostBody.json" />
+      <File FileName="remixed_recipes/Controllers/AccountsController.cs" Line="1" Column="11" />
+      <File FileName="remixed_recipes/Program.cs" />
+      <File FileName="remixed_recipes/Services/AccountService.cs" Line="1" Column="1" />
+      <File FileName="remixed_recipes/Startup.cs" Line="44" Column="32" />
+      <File FileName="remixed_recipes/Controllers/BaseAuthController.cs" Line="1" Column="1" />
+      <File FileName="remixed_recipes/Services/JwtMiddleware.cs" Line="32" Column="1" />
+      <File FileName="remixed_recipes/Data/ApiDBContext.cs" Line="26" Column="16" />
+      <File FileName="remixed_recipes/Models/Accounts/CreateRequest.cs" Line="1" Column="1" />
+      <File FileName="remixed_recipes/Models/Accounts/UpdateRequest.cs" Line="1" Column="1" />
+      <File FileName="remixed_recipes/Models/Accounts/AccountResponse.cs" Line="1" Column="1" />
+      <File FileName="remixed_recipes/Models/Accounts/AuthenticateRequest.cs" Line="1" Column="1" />
+      <File FileName="remixed_recipes/Models/Accounts/AuthenticateResponse.cs" Line="1" Column="1" />
+      <File FileName="remixed_recipes/Services/UserService.cs" Line="7" Column="21" />
+      <File FileName="remixed_recipes/Helpers/AuthorizeAttribute.cs" Line="1" Column="1" />
+      <File FileName="remixed_recipes/Helpers/AutoMapperProfile.cs" Line="1" Column="1" />
+      <File FileName="remixed_recipes/Helpers/AppSettings.cs" Line="1" Column="1" />
+      <File FileName="remixed_recipes/Helpers/AppException.cs" Line="1" Column="1" />
+      <File FileName="remixed_recipes/appsettings.json" Line="1" Column="1" />
+      <File FileName="remixed_recipes/Models/RefreshToken.cs" Line="1" Column="1" />
       <File FileName="remixed_recipes/Models/Account.cs" Line="1" Column="1" />
-      <File FileName="remixed_recipes/exampleRecipePostBody.json" Line="4" Column="12" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,11 +32,13 @@
           <Node name="remixed_recipes" expanded="True">
             <Node name="remixed_recipes" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Data" expanded="True" />
               <Node name="Helpers" expanded="True" />
-              <Node name="Models" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Accounts" expanded="True" />
+                <Node name="Account.cs" selected="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
               <Node name="Services" expanded="True" />
-              <Node name="exampleRecipePostBody.json" selected="True" />
             </Node>
           </Node>
         </State>
@@ -33,16 +50,13 @@
   <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Services/UserService.cs" relfile="remixed_recipes/Services/UserService.cs" line="19" column="1" />
-      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Services/UserService.cs" relfile="remixed_recipes/Services/UserService.cs" line="18" column="1" />
-      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Data/ApiDBContext.cs" relfile="remixed_recipes/Data/ApiDBContext.cs" line="49" column="1" />
-      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Data/ApiDBContext.cs" relfile="remixed_recipes/Data/ApiDBContext.cs" line="50" column="1" />
-      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Data/ApiDBContext.cs" relfile="remixed_recipes/Data/ApiDBContext.cs" line="52" column="1" />
-      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Data/ApiDBContext.cs" relfile="remixed_recipes/Data/ApiDBContext.cs" line="54" column="1" />
-      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Controllers/AccountsController.cs" relfile="remixed_recipes/Controllers/AccountsController.cs" line="102" column="1" />
-      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Controllers/AccountsController.cs" relfile="remixed_recipes/Controllers/AccountsController.cs" line="104" column="1" />
-      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Controllers/AccountsController.cs" relfile="remixed_recipes/Controllers/AccountsController.cs" line="105" column="1" />
-      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Controllers/AccountsController.cs" relfile="remixed_recipes/Controllers/AccountsController.cs" line="106" column="1" />
+      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Controllers/RecipeController.cs" relfile="remixed_recipes/Controllers/RecipeController.cs" line="181" column="1" />
+      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Controllers/RecipeController.cs" relfile="remixed_recipes/Controllers/RecipeController.cs" line="187" column="1" />
+      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Controllers/RecipeController.cs" relfile="remixed_recipes/Controllers/RecipeController.cs" line="133" column="1" />
+      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Controllers/RecipeController.cs" relfile="remixed_recipes/Controllers/RecipeController.cs" line="135" column="1" />
+      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Controllers/RecipeController.cs" relfile="remixed_recipes/Controllers/RecipeController.cs" line="136" column="1" />
+      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Controllers/RecipeController.cs" relfile="remixed_recipes/Controllers/RecipeController.cs" line="137" column="1" />
+      <Breakpoint file="/Users/josehernandez/coding-projects/remixed_recipes/back/remixed_recipes/Controllers/RecipeController.cs" relfile="remixed_recipes/Controllers/RecipeController.cs" line="141" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
